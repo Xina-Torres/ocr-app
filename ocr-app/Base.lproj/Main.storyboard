@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7IH-Nb-5jz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ML Kit-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ocr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="brick" translatesAutoresizingMaskIntoConstraints="NO" id="X5Y-m8-nbH">
+                                <rect key="frame" x="10" y="74" width="355" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="o9p-Hu-Etw"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Bcu-19-7fp">
+                                <rect key="frame" x="10" y="512" width="355" height="105"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v6t-Ww-gi1">
+                                        <rect key="frame" x="10" y="0.0" width="335" height="32.5"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Choose Image">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name="Avenir-Medium"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapChooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BsN-yi-w3e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dsg-EQ-6qr">
+                                        <rect key="frame" x="10" y="72.5" width="335" height="32.5"/>
+                                        <color key="backgroundColor" red="0.97647058959999999" green="0.70588237050000002" blue="0.17254902420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Recognize Text">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name="Avenir-Medium"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapTextRecog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7B-sO-Kki"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v6t-Ww-gi1" secondAttribute="trailing" constant="10" id="5Ol-UB-nE2"/>
+                                    <constraint firstItem="v6t-Ww-gi1" firstAttribute="leading" secondItem="Bcu-19-7fp" secondAttribute="leading" constant="10" id="9FH-3s-dvF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dsg-EQ-6qr" secondAttribute="trailing" constant="10" id="ZKY-Dc-Zn8"/>
+                                    <constraint firstItem="Dsg-EQ-6qr" firstAttribute="leading" secondItem="Bcu-19-7fp" secondAttribute="leading" constant="10" id="bDX-GC-2MZ"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bcu-19-7fp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="22A-ex-Le4"/>
+                            <constraint firstItem="Bcu-19-7fp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Nj-YM-iO7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X5Y-m8-nbH" secondAttribute="trailing" constant="10" id="EIM-IK-3Nn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bcu-19-7fp" secondAttribute="trailing" constant="10" id="Hs7-fK-V4w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bcu-19-7fp" secondAttribute="bottom" constant="50" id="RPX-2g-5Gm"/>
+                            <constraint firstItem="X5Y-m8-nbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="WR5-Wj-PUy"/>
+                            <constraint firstItem="X5Y-m8-nbH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="zZm-fH-EoO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ML Kit" id="7Ix-s4-dJh"/>
+                    <connections>
+                        <outlet property="imageV" destination="X5Y-m8-nbH" id="0B1-iS-gME"/>
+                        <segue destination="Kmc-Vn-xHr" kind="show" identifier="textRecognition" id="6na-Fq-std"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1071.2" y="107.49625187406298"/>
+        </scene>
+        <!--Text Recognition-->
+        <scene sceneID="oPi-fY-6NY">
+            <objects>
+                <viewController id="Kmc-Vn-xHr" customClass="TextRecogViewController" customModule="ocr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p4c-bQ-Xsh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vVU-pN-2NB">
+                                <rect key="frame" x="10" y="74" width="355" height="583"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ssm-fE-aTq">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="287.5"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lau-zM-qeg">
+                                        <rect key="frame" x="0.0" y="295.5" width="355" height="287.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vVU-pN-2NB" firstAttribute="leading" secondItem="eyR-aM-6eM" secondAttribute="leading" constant="10" id="0qX-1g-Dx1"/>
+                            <constraint firstItem="eyR-aM-6eM" firstAttribute="trailing" secondItem="vVU-pN-2NB" secondAttribute="trailing" constant="10" id="QpT-Cs-CmG"/>
+                            <constraint firstItem="vVU-pN-2NB" firstAttribute="top" secondItem="eyR-aM-6eM" secondAttribute="top" constant="10" id="Vc0-iV-xfu"/>
+                            <constraint firstItem="eyR-aM-6eM" firstAttribute="bottom" secondItem="vVU-pN-2NB" secondAttribute="bottom" constant="10" id="jJ3-6q-H4P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eyR-aM-6eM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Text Recognition" id="UQb-Bq-bbN"/>
+                    <connections>
+                        <outlet property="imageV" destination="Ssm-fE-aTq" id="pJp-ZQ-7sF"/>
+                        <outlet property="textV" destination="lau-zM-qeg" id="kQp-R8-hcj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vU-aC-Phd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="107"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GT9-tg-IQi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7IH-Nb-5jz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9nU-G5-Rg7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4cx-6N-Bxq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxX-Jz-OcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="766.86656671664173"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="brick" width="403" height="259"/>
+    </resources>
+</document>
